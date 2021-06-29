@@ -10,8 +10,23 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+
 - task: ArchiveFiles@2
   inputs:
-    rootFolderOrFile: '$(build.sourcesDirectory)'
-    includeRootFolder: false
+    rootFolderOrFile: '$(Build.BinariesDirectory)'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+
 - task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'PublishProfile'
+    PublishProfilePath: '$(System.DefaultWorkingDirectory)/**/*.pubxml'
+    PublishProfilePassword: 'Alexi$9991'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
