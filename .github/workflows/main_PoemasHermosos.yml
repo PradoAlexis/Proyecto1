@@ -56,5 +56,5 @@
           with:
             app-name: 'PoemasHermosos'
             slot-name: 'production'
-            publish-profile: ${{ secrets.AzureAppService_PublishProfile_21bffed271584130825be91e4bb2f6ad }}
+            publish-profile: ${{ secrets.AzureAppService_PublishProfile_f08fa099793346048a0b29505baaac41 }}
             package: .
