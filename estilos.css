@@ -28,19 +28,18 @@ body{
 .agrupar{
 	width: 960px;
 	border: 1px solid black;
-	background: #F5F1B6;
+	background: #e0d8ce;
 	margin: 15px auto;
 	padding: 10px;
 }
 
 .header{
-	background: #fffbb9;
-	border: 2px solid orange;
+	background: #d1c089;
+	border: 2px solid rgb(255, 255, 255);
 	padding: 15px;
 }
 
 .menu{
-	background: #ccc;
 	padding: 5px 15px;
 	text-align: left;
 }
@@ -61,7 +60,7 @@ body{
 
 
 article{
-	background: #fffbcc;
+	background: #fafdc7;
 	border: 1px solid black;
 	padding: 25px;
 	margin-bottom: 25px;
@@ -85,14 +84,14 @@ article footer{
 .columna blockquote{
 	border: 1px solid black;
 	padding: 80px;
-	background: #fff973;
+	background: #f5d89a;
 	margin-bottom: 50px;
 }
 
 .pie{
 	clear: both;
 	padding: 30px;
-	background: pink;
+	background: rgb(224, 192, 101);
 	color: black;
 }
 
